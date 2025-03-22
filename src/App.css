@@ -24,3 +24,32 @@
 .navbar-brand{
   color: white!important;
 }
+
+.spinner {
+    font-size: 50px;
+    animation: spin 2s linear infinite, colorChange 1s infinite;
+    color: #198754!important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.itemCard{
+  max-width: 210px;
+  border: 1px solid #198754;
+  border-radius: 5px;
+}
+.itemCardImage{
+  max-width: 200px;
+}
+.itemCardContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  justify-items: start;
+}
