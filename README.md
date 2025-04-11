@@ -14,8 +14,8 @@ Esta es una aplicación React construida con [Vite](https://vitejs.dev/). La apl
 
 1. Clona el repositorio:
    ```bash
-   git clone 
-   cd tu-repo
+   git clone https://github.com/MikkaLiz/mikkaL-reactApp
+   cd mikkaL-reactApp
    ```
 
 2. Instala las dependencias:
