@@ -1,24 +1,31 @@
 import "./App.css";
 import "./components/NavbarComponent";
-import NavbarComponent from "./components/NavbarComponent";
 import NavBarStrapComponent from "./components/NavBarStrapComponent";
-import ContadorComponent from "./components/ContadorComponent";
-import ItemListContainer from "./components/ItemListContainerComponent";
-import ToDoItem from "./components/ToDoItemComponent";
+import ItemListContainer from "./components/item/ItemListContainerComponent"; 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ItemDetail from "./components/ItemCardComponent";
-import ItemDetailContainer from "./components/ItemDetailContainerComponent";
+import ItemDetailContainer from "./components/item/ItemDetailContainerComponent";
+import { CartProvider } from "./context/CartContext";
+import CartContainerComponent from "./components/cart/CartContainerComponent";
+import ClientCheckoutContainer from "./components/checkout/ClientCheckoutContainer";
 function App() {
+
   return (
     <>
       <BrowserRouter>
-        <NavBarStrapComponent />
-        <Routes>
-          <Route path="/" element={<ItemListContainer greeting="Hola" />} />
-          <Route path="/category/:type" element={<ItemListContainer greeting="nuevos" />} />
-          <Route path="/to-do" element={<ToDoItem />} />
-          <Route path="/item/:id" element={<ItemDetailContainer />} />
-        </Routes>
+        <CartProvider>
+          <NavBarStrapComponent />
+
+          <Routes>
+            <Route path="/" element={<ItemListContainer/>} />
+            <Route
+              path="/category/:type"
+              element={<ItemListContainer greeting="nuevos" />}
+            />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<CartContainerComponent />} />
+            <Route path="/checkout" element={<ClientCheckoutContainer/>}/>
+          </Routes>
+        </CartProvider>
       </BrowserRouter>
     </>
   );
