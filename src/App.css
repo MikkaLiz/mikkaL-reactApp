@@ -14,13 +14,73 @@
 }
 @media screen and (min-width: 992px) {
   .dropdown-item {
-    text-align: right!important;
+    text-align: right !important;
   }
 }
 .navBarContainer {
-  background: #198754!important;
+  background: #198754 !important;
   color: white;
 }
-.navbar-brand{
-  color: white!important;
+.navbar-brand {
+  color: white !important;
+}
+
+.spinner {
+  font-size: 50px;
+  animation: spin 2s linear infinite, colorChange 1s infinite;
+  color: #198754 !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.itemCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  justify-items: start;
+}
+.cart-item-image {
+  max-width: 40px;
+  max-height: 40px;
+}
+.cartItemDetail {
+  margin: 0;
+}
+html,
+body {
+  background: radial-gradient(circle at bottom right, #c2e3c680 50%, white 50%);
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed; /* Ensures the gradient stays fixed while scrolling */
+}
+.itemCard {
+  max-width: 210px;
+  border: 1px solid #198754;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+  padding: 10px;
+}
+
+.itemCardImage {
+  max-width: 100%;
+}
+
+.itemCardContent {
+  flex-grow: 1; /* Ensures the content takes up available space */
+}
+
+.itemCardButton {
+  margin-top: auto; /* Pushes the button to the bottom */
 }

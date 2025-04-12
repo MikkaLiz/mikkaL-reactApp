@@ -1,8 +1,34 @@
-# React + Vite
+# Mi Aplicación React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación React construida con [Vite](https://vitejs.dev/). La aplicación incluye características como listado de productos, gestión de carrito y la integración de Firebase para el almacenamiento de datos.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca frontend para construir interfaces de usuario.
+- **Vite**: Herramienta de construcción rápida para proyectos web modernos.
+- **Firebase**: Backend como servicio para base de datos y autenticación.
+- **React Router**: Para navegación y enrutamiento.
+- **Bootstrap**: Para estilos y diseño responsivo.
+
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/MikkaLiz/mikkaL-reactApp
+   cd mikkaL-reactApp
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+4. Abre la aplicación en tu navegador:
+   ```
+   http://localhost:5173
+   ```
